@@ -1,0 +1,331 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Unity - Register</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <meta name="description" content="Unity - New Member" />
+        <meta name="keywords" content="unity, academic, social, network, ultimate"/>
+        <link rel="stylesheet" href="../../css/reg_style.css" type="text/css" media="screen"/>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script type="text/javascript" src="../../js/sliding.form.js"></script>
+        <script type="text/javascript" src="../../js/jquery_effects.js"></script>
+        <style type="text/css">
+            span.reference{
+                position:fixed;
+                left:5px;
+                top:5px;
+                font-size:10px;
+                text-shadow:1px 1px 1px #fff;
+            }
+            span.reference a{
+                color:#555;
+                text-decoration:none;
+                            text-transform:uppercase;
+            }
+            span.reference a:hover{
+                color:#000;
+
+            }
+        </style>
+    </head>
+    <body>
+    <center><img id="logo" src="../../photos/unity_logo.png" alt="Unity Logo"/></center>
+        <div id="content">    
+        <div id="wrapper">
+            <div id="steps">
+                <form id="formElem" name="formElem" action="signupcomplete.jsp" method="post">
+                    <fieldset class="step">
+                        <legend>Register - Basic Information</legend>
+                        <p>
+                            <label for="username">User Name</label>
+                            <input id="username" name="name" />
+                        </p>
+                        <p>
+                            <label for="email">Email</label>
+                            <input id="email" name="email" placeholder="*@hua.gr" AUTOCOMPLETE="OFF" type="email"/>
+                        </p>
+                        <p>
+                            <label for="password">Password</label>
+                            <input id="password" name="password" type="password" AUTOCOMPLETE="OFF" />
+                        </p>
+                        <p>
+                            <label for="academic_role">Academic Role</label>
+                            <select id="academic_role" name="academic_role">
+                                <option value="" selected="selected"> - Choose -</option>
+                                <option value="student">Student</option>
+                                <option value="teacher">Teaching Staff</option>
+                                <option value="staff">Administrative Staff</option>
+                            </select>
+                        </p>
+                        <p id="par_student">
+                            <label for="student">Student</label>
+                            <select name="student" id="student">
+                                <option value="" selected="selected"> - Choose -</option>
+                                <option value="1">Undergraduate</option>
+                                <option value="2">Postgraduate</option>
+                                <option value="3">PhD Candidate</option>
+                            </select>
+                        </p>
+                        <p id="tutor">
+                            <label for="teacher">Teacher</label>
+                            <select name="teacher" id="teacher">
+                                <option value="" selected="selected"> - Choose -</option>
+                                <option value="4">Faculty</option>
+                                <option value="5">Temporary</option>
+                            </select>
+                        </p>
+                        <p id="par_staff">
+                            <label for="staff">Staff</label>
+                            <select name="staff" id="staff">
+                                <option value="" selected="selected"> - Choose -</option>
+                                <option value="6">Secretary</option>
+                                <option value="7">ETEP</option>
+                                <option value="8">Library</option>
+                                <option value="9">Misc</option>
+                            </select>
+                        </p>
+                        <p id="par_department">
+                          <label for="deparment">Department</label>    
+                          <select name="department" id="department">
+                             <option value="" selected="selected"> - Choose -</option>
+                             <option value="1">Informatics and Telematics</option>
+                             <option value="2">Dietetics and Nutritional Science</option>
+                             <option value="3">Home Economics and Ecology</option>
+                             <option value="4">Geography</option>
+                          </select>
+                        </p>
+                        <p id="par_service">
+                            <label for="service">Service</label>
+                            <select name="service" id="service">
+                                <option value="" selected="selected"> - Choose -</option>
+                                <option value="2">Secretary of Home Economics and Ecology</option>
+                                <option value="2">Secretary of Dietetics and Nutritional Science</option>
+                                <option value="2">Secretary of Geography</option>
+                                <option value="1">Secretary of Informatics and Telematics</option>
+                                <option value="3">Library and Informational Center</option>
+                                <option value="3">Careers and Advisory Office</option>
+                                <option value="3">Students' Advisory Center</option>
+                                <option value="3">Research Support Office</option>
+                                <option value="3">Network Operation Center</option>
+                            </select>
+                        </p>
+                    </fieldset>
+                    <fieldset class="step">
+                        <legend>Register - Academic Information</legend>
+                        <div id="academic_info-message">
+                            <p>Please, fill-in all Basic Information first before you proceed to this step!</p>
+                        </div>
+                        <div id="academic_info-student">
+                            <p id="student_code">
+                                <label for="student_code_s">Student Code</label>  
+                                <input type="text" name="student_code" id="student_code_s" size="6" pattern="[0-9]*" />
+                            </p>
+                            <p id="admission_year">
+                                <label for="admission_year_s">Admission Year</label>  
+                                <input type="text" name="admission_year" id="admission_year_s" size="6" pattern="[0-9]*" />
+                            </p>
+                            <p id="fav_course">
+                                <label for="fav_course_s">Favourite Course</label>  
+                                <select name="fav_course" id="fav_course_s">
+                                    <option value="null" selected="selected"> - Choose -</option>
+                                    <option value="Artificial Intelligence">Artificial Intelligence</option>
+                                    <option value="Data Base Systems">Data Base Systems</option>
+                                    <option value="Compilers">Compilers</option>
+                                    <option value="Programming I">Programming I</option>
+                                    <option value="Programming II">Programming II</option>
+                                    <option value="Fiber Optics">Fiber Optics</option>
+                                </select><br />
+                            </p>
+                            <p id="hate_course">
+                                <label for="hate_course_s">Worst Course</label>  
+                                <select name="hate_course" id="hate_course_s">
+                                    <option value="null" selected="selected"> - Choose -</option>
+                                    <option value="Artificial Intelligence">Artificial Intelligence</option>
+                                    <option value="Data Base Systems">Data Base Systems</option>
+                                    <option value="Compilers">Compilers</option>
+                                    <option value="Programming I">Programming I</option>
+                                    <option value="Programming II">Programming II</option>
+                                    <option value="Fiber Optics">Fiber Optics</option>
+                                </select><br />
+                            </p>
+                            <p id="graduated_from">
+                                <label for="graduated_from_s">Graduated from</label>  
+                                <input type="text" name="graduated_from"  id="graduated_from_s"/>
+                            </p>
+                        </div>
+                        <div id="academic_info-teacher1">
+                            <br/><br/>
+                            <p id="par_position">
+                                <label for="position">Position</label>  
+                                <select name="position" id="position">
+                                    <option value="null" selected="selected"> - Choose -</option>
+                                    <option value="Lecturer">Lecturer</option>
+                                    <option value="Assistant Professor">Assistant Professor</option>
+                                    <option value="Associate Professor">Associate Professor</option>
+                                    <option value="Professor">Professor</option>
+                                </select>
+                            </p>
+                            <p id="par_position1">
+                                <label for="position1">Position</label>  
+                                <select name="position1" id="position1">
+                                    <option value="null" selected="selected"> - Choose -</option>
+                                    <option value="407/80">407/80</option>
+                                    <option value="Visitor">Visitor</option>
+                                    <option value="Exwterikos sunergatis">External Staff</option>
+                                </select>
+                            </p>
+                            <p id="par_office_hours">
+                                <label for="office_hours_s">Office hours</label>  
+                                <input type="text" name="office_hours" id="office_hours_s" /> 
+                            </p>
+                            <p id="par_office_number">
+                                <label for="office_number_s">Office number</label>  
+                                <input type="text" name="office_no" id="office_number_s"/> <br />
+                            </p>
+                            <p id="par_research">
+                                <label for="research_s">Research Focus</label>  
+                                <input type="text" name="research" id="research_s"/> <br />
+                            </p>
+                            <p id="par_courses">
+                                <label for="course">Courses</label>
+                                <select name="course" id="course">
+                                    <option value="Artificial Intelligence"> A.I.</option>
+                                    <option value="Data Base Systems" > Data Base Systems</option>
+                                    <option value="Compilers"> Compilers</option>
+                                    <option value="Programming I"> Programming I</option>
+                                    <option value="Programming II" > Programming II</option>
+                                    <option value="Fiber Optics"> Fiber Optics</option>
+                                    <option value="Simulation"> Simulation</option>
+                                    <option value="Discrete Mathematics I"> Discrete Mathematics I</option>
+                                    <option value="Discrete Mathematics II"> Discrete Mathematics II</option>
+                                    <option value="Advanced Programming"> Advanced Programming</option>
+                                </select>
+                            </p>
+                        </div>
+                        <div id="academic_info-staff">
+                            <br/><br/>
+                            <p id="par_position2">
+                                <label for="position2">Position</label>  
+                                <select name="position2" id="position2">
+                                    <option value="null" selected="selected"> - Choose -</option>
+                                    <option value="Default Position">Default Position</option>
+                                </select>
+                            </p>
+                        </div>
+                    </fieldset>
+                    <fieldset class="step">
+                        <legend>Register - Social Information (1/2)</legend>
+                        <p id="gender">
+                            <label for="gender">Gender</label>
+                            Male <input type="radio" value="Male" name="gender" placeholder="male"/>
+                            Female <input type="radio" value="Female" name="gender"/>
+                        </p>
+                        <p>
+                            <label for="day">Day</label>
+                            <input type="number" id="day" name="day" min="1" max="31" size="4" pattern="[0-9]*" placeholder="Day"/>
+                            <label for="month">Month</label>
+                            <input type="number" id="month" name="month" min="1" max="12" size="4" pattern="[0-9]*"  placeholder="Month"/>
+                            <label for="year">Year</label>
+                            <input type="number" id="year" name="year" min="1900" max="2011" size="6" pattern="[0-9]*"  placeholder="Year"/> 
+                        </p>
+                        <p id="aboutme">
+                            <label for="aboutme">About me</label>
+                            <input type="text" name="about" placeholder="About you..." />
+                        </p>
+                        <p id="status">
+                            <label for="status">Status</label>
+                            <input type="text" name="status" placeholder="Your current status..." />
+                        </p>
+                        <p id="nickname">
+                            <label for="nickname">Nickname</label>
+                            <input type="text" name="nickname" placeholder="A Nickname of yours..." />
+                        </p>
+                    </fieldset>
+                    <fieldset class="step">
+                        <legend>Register - Social Information (2/2)</legend>
+                        <p>
+                            <label for="happiest_when">Happiest When</label>
+                            <input type="text" id="happiest_when" name="happiest_when" placeholder="When do you feel the happiest?" /><br /><br />
+                            <label for="scared_of">Scared of</label>
+                            <input id="scared_of" type="text" name="scared_of" placeholder="What are you scared of?" /> 
+                        </p>
+                        <p>
+                            <label for="job_interests">Job Interests</label>
+                            <input type="text" id="job_interests" name="job_interests" placeholder="What are your Job Interests?" />
+                        </p>
+                        <p>
+                            <label for="political_views">Political Views</label>
+                            <input type="text" id="political_views" name="political_views" placeholder="Where do you stand on Politics?" /><br /><br />
+                            <label for="religion">Religion</label>
+                            <input type="text" id="religion" name="religion" placeholder="What's your Religion?" /> 
+                        </p>
+                        <p>
+                            <label for="drinker">Drinker</label>
+                            <select id="drinker" name="drinker">
+                                <option value="null" selected="selected"> - Choose -</option>
+                                <option value="Yes">Yes</option>
+                                <option value="No">No</option>
+                                <option value="Socially">Socially</option>
+                                <option value="Occasionally">Occasionally</option>
+                                <option value="Regularly">Regularly</option>
+                                <option value="Quit">Quit</option>
+                                <option value="Quitting">Quitting</option>
+                                <option value="Heavily">Heavily</option>
+                            </select> <br /><br />
+                            <label for="smoker">Smoker</label>
+                            <select id="smoker" name="smoker">
+                                <option value="null" selected="selected"> - Choose -</option>
+                                <option value="Yes">Yes</option>
+                                <option value="No">No</option>
+                                <option value="Socially">Socially</option>
+                                <option value="Occasionally">Occasionally</option>
+                                <option value="Regularly">Regularly</option>
+                                <option value="Quit">Quit</option>
+                                <option value="Quitting">Quitting</option>
+                                <option value="Heavily">Heavily</option>
+                            </select>
+                        </p>
+                        <p>
+                        <label for="relationship_status">Relationship Status</label>
+                        <select id="relationship_status" name="relationship_status">
+                            <option value="null" selected="selected"> - Choose -</option>
+                            <option value="Single">Single</option>
+                            <option value="In a relationship">In a relationship</option>
+                            <option value="Engaged">Engaged</option>
+                            <option value="Married">Married</option>
+                            <option value="Divorced">Divorced</option>
+                            <option value="Widowed">Widowed</option>
+                        </select>
+                        </p>
+                    </fieldset>
+                    <fieldset class="step">
+                        <legend>Register - Confirm</legend>
+                        <p>
+                            Fill-out all the Basic Information fields. Personalize your 
+                            new Profile with additional information. To end your personalization, 
+                            you can upload a picture of yours, if you want.<br/><br/>
+                            <input type="file" accept="image/jpg, image/gif, image/jpeg, image/png"/></p>
+                        <p class="submit">
+                            <button id="registerButton" type="submit">Register</button>
+                        </p>
+                    </fieldset>
+                </form>
+            </div>
+            <div id="navigation" style="display:none;">
+                <ul>
+                    <li class="selected">
+                        <a href="#">Basic</a></li>
+                    <li>
+                        <a href="#">Academic Info</a></li>
+                    <li>
+                        <a href="#">Social Info 1</a></li>
+                    <li>
+                        <a href="#">Social Info 2</a></li>
+                    <li>
+                        <a href="#">Complete</a></li>
+                </ul>
+            </div>
+        </div>
+        </div>
+    </body>
+</html>
