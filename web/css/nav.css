@@ -1,0 +1,59 @@
+
+#navbar {
+	background-image: url(../photos/images/menu-bar_06.gif);
+	background-repeat: repeat-x;
+	position: fixed;
+	width: 100%;
+	height: 43px;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+}
+
+#navlogo img {
+        left : 40px;    
+	position: absolute;
+	height: 95%; 
+}
+
+#navmenu {
+	position: absolute;
+	right: 50px;
+}
+
+#navperson {
+    height: 90%; 
+    position : absolute;
+    right: 680px;
+    width: 150px;
+}
+
+#navperson img {
+    margin-top:3px;
+    margin-bottom:1px;
+    width:32px;
+    float:left;
+}
+
+#navperson p {
+    font-weight: bold;
+    width:50px;
+    float:left;
+    margin-top:6px;
+    margin-left:8px;
+    margin-bottom:2px;
+    color: white;
+    font-family: Tahoma;
+    font-size:13px;
+}
+
+#navupdates {
+    margin-top: 10px;
+    position : absolute;
+    right: 630px;
+}
+
+#navupdates img{
+    width: 25px;
+    height: 25px;
+}

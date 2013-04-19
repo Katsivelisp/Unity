@@ -1,0 +1,114 @@
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+root { 
+    display: block;
+}
+/* Personal Information */
+#profile{
+    ;
+}
+#profile_pic {
+    max-width: 100%; 
+    padding-bottom: 20px;
+    /*float: left;*/
+    display: inline;
+}
+
+#relantionship {
+    max-width: 100%; 
+    /*padding-bottom: 20px;*/
+    /*float: left;*/
+    display: inline;
+}
+
+#profileImg {
+    width:120px;
+    height:120px;
+}
+
+#relFellow{
+    width : 95%;
+    padding-top: 25px;
+}
+
+#relFellow h4 {
+    display: inline;
+    color : green;
+}
+
+#relFellow img {
+    width: 20px;
+    height: 20px;
+    float: right;
+    display: inline;
+}
+
+#relTutor {
+    width : 95%;
+    padding-top: 25px;
+}
+
+#relTutor h4 {
+    display: inline;
+    color : green;
+}
+
+#relTutor img {
+    width: 20px;
+    height: 20px;
+    float: right;
+    display: inline;
+}
+
+#relFacilitator {
+    width : 95%;
+    padding-top: 25px;
+}
+
+#relFacilitator h4 {
+    display: inline;
+    color : green;
+}
+
+#relFacilitator img {
+    width: 20px;
+    height: 20px;
+    float: right;
+    display: inline;
+}
+
+#personal_info {
+    font-family: serif;
+    margin-top: 12%;
+}
+
+#personal_info_academic {
+    /*float : left;*/
+    width : 95%;
+    border: grey 1px thin;
+    padding-bottom: 10px;
+}
+
+.info_title {
+    font-size: 11pt;
+}
+
+.information {
+    padding-top: 10%;
+    padding-bottom: 5%;
+}
+
+#personal_info_social {
+    float: left;
+    width : 95%;
+    border: grey 1px thin;
+}
+
+#contacts {
+    float: left;
+    margin-top:5%;
+    background-color:white;
+}
